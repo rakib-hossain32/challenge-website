@@ -147,7 +147,7 @@ main {
     border: 1px solid inside rgb(13, 19, 33);
     padding: 12px 20px;
     background-color: white;
-    border-radius: 8px 0;
+    border-radius: 30px 0;
 
 }
 
@@ -248,8 +248,15 @@ main {
 }
 
 .support {
-    background-image: url('../assets/handshake.jpg');
-    /* background-image: cover; */
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    ), url('../assets/handshake.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     /* height: 313px; */
     width: 100%;
     background-position: center;
@@ -267,11 +274,14 @@ main {
 .support-title {
     margin-bottom: 16px;
     color: white;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .support-description {
     margin-bottom: 24px;
     color: white;
+    opacity: 70%;
 }
 
 .input-fild {
@@ -280,9 +290,12 @@ main {
     border: 1px solid rgba(13, 19, 33, 0.15);
     border-radius: 8px;
     padding: 20px 0 20px 20px;
-    color: rgba(13, 19, 33, 0.4);
+    
+    
 }
-
+input::placeholder{
+color:rgba(13, 19, 33, 0.4);
+}
 .support-submit {
     border-radius: 8px;
     padding: 17px 20px;
@@ -349,7 +362,7 @@ main {
 
     .input-fild {
         width: 100%;
-    height: 57px;
+        height: 57px;
         border: 1px solid rgba(13, 19, 33, 0.15);
         border-radius: 8px;
         padding: 20px 0 20px 20px;
@@ -360,6 +373,21 @@ main {
         text-align: center;
         gap: 20px;
     }
+    #cv-btn{
+        background-color: white;
+    border: 1px solid #0D1321;
+    padding: 10px 10px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    }
+    .navbar-anchor {
+    text-decoration: none;
+    color: #0D1321;
+    font-weight: .6rem;
+    font-weight: 400;
+    padding: 0;
+}
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {
@@ -396,5 +424,18 @@ main {
     }
     .support-submit {
         margin-top: 20px;
+    }
+    .input-fild {
+        width: 100%;
+        height: 57px;
+        border: 1px solid rgba(13, 19, 33, 0.15);
+        border-radius: 8px;
+        padding: 20px 0 20px 20px;
+        color: rgba(13, 19, 33, 0.4);
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 }
